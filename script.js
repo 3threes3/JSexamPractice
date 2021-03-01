@@ -1,19 +1,18 @@
-var calification = ["ana", "osvaldo", "raúl", "celia", "maría", "antonio"];
+var data = new Array();
 
-document.write("Premod: <br>"); 
-document.write("-------------------- <br>")
+data[0] = new Array("Perico", "Palotes", 40); 
+data[1] = new Array("David", "Lorenzo", 33); 
+data[2] = new Array("Ana", "Monfort", 8); 
 
-for (i = 0; i < calification.length; i++){
-  document.write(calification[i] + "<br>")
+var table = "<table border='1'><tr><th>Name</th><th>Lastname</th><th>Fav number</th>";
+
+document.write(table);
+
+for (let i = 0; i < data.length; i++){
+  document.write("<tr>");
+  for(let j = 0; j < data[i].length; j++){
+    document.write("<td>" + data[i][j] + "</td>");
+  }
+  document.write("</tr>");
 }
 
-calification.unshift("marta")
-document.write("<br>")
-
-
-document.write("Modificada <br>")
-document.write("-------------------- <br>")
-
-for (i = 0; i < calification.length; i++){
-  document.write(calification[i] + "<br>")
-}
