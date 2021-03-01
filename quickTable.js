@@ -1,7 +1,7 @@
 var data = new Array();
 
-data[0] = new Array("Perico", "Palotes", 40); 
-data[1] = new Array("David", "Lorenzo", 33); 
+data[0] = new Array("Perico", "Nada", 40); 
+data[1] = new Array("David", "Whatever", 33); 
 data[2] = new Array("Ana", "Monfort", 8); 
 
 var table = "<table border='1'><tr><th>Name</th><th>Lastname</th><th>Fav number</th>";
