@@ -1,0 +1,11 @@
+<body>
+    <div id="parent" style="border: 2px solid black; height: 100px; width: 200px;" >
+        <div id="son" style="border: 2px solid red; height: 50px; width: 100px;"></div>
+    </div>
+</body>
+
+<script>
+    document.getElementById("son").addEventListener("click", function() { alert("it is me, the son")}, true);
+    document.getElementById("parent").addEventListener("click", function() { alert("it is me, the parent")}, true);
+
+</script>
