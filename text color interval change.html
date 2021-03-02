@@ -1,0 +1,18 @@
+<body>
+
+    <p id="myText">Hi this is my text</p>
+
+</body>
+
+<script>
+
+    function changeTextColor(){
+        var text = document.getElementById("myText");
+        text.style.color = "rgb(" + Math.round(Math.random()*255) + "," + 
+        Math.round(Math.random()*255) + "," +
+        Math.round(Math.random()*255) + ")";
+    }
+
+    setInterval(changeTextColor, 2000);
+
+</script>
