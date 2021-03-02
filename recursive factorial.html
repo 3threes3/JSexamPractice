@@ -1,0 +1,14 @@
+<script>
+
+    var number = prompt("Enter the number you want the factorial for: ");
+    document.write("The factorial for " + number + " is equal to " + factorial(number))
+
+    function factorial(number){
+        if (number == 0){
+            return 1;
+        } else {
+            return number * factorial (number - 1);
+        }
+    }
+
+</script>
