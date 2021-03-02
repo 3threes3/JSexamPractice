@@ -1,0 +1,33 @@
+<head>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+    
+
+<body>
+    <button type="button" id="htmlButton" onclick="message()">HTML button</button>
+    <button type="button" id="eventButton">Event Button</button>
+    <button type="button" id="jQuery">jQuery Button</button>
+</body>
+
+<script>
+    function message(){
+        alert("they don't think it be like it is, but it do")
+    }
+
+    document.getElementById("eventButton").addEventListener("click", eventMessage);
+
+    function eventMessage(){
+        alert("i didn't come here to play school")
+    }
+
+    $(document).ready(start);
+    
+    function start(){
+        $("#jQuery").click(jQueryMessage);
+    }
+
+    function jQueryMessage(){
+        alert("the life and times of shawn carter");
+    }
+</script>
