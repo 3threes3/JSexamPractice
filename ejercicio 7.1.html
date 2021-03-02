@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="stepsId">
+        <ol>
+          <li id="li1"><b>Elemento 1</b></li>
+          <li id="li2"><b>Elemento 2</b></li>
+          <li id="li3"><b>Elemento 3</b></li>
+        </ol>
+      </div>
+    
+</body>
+<script>
+
+//  Colores entre los que elegir
+var colors = ["blue", "yellow", "red", "orange", "black", "green"]
+//  Establezco color inicial
+var currentColor = 0
+var lis = document.querySelectorAll("#stepsId li")
+
+//  Con la función lo que hago simplemente es ir recorriendo la lista desde el final hacia delante. 
+//  Cada uno de los elementos va un color por delante, es decir, si Elemento 1 está en azul, Elemento 2 estará en amarillo
+//  y elemento 3 estará en rojo. 
+function changeColor() {
+  --currentColor
+  if (currentColor < 0) currentColor = colors.length -1
+  for (var i = 0; i < lis.length; i++) {
+    lis[i].style.color = colors[(currentColor +i) % colors.length]
+  }
+}
+
+setInterval(changeColor, 2000)
+
+</script>
+</html>
