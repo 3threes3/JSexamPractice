@@ -1,0 +1,43 @@
+<body onload="initialize()">
+
+<h1>Open and close windows</h1>
+<form>
+<p>
+<input type="button" id="open" value="open new window">
+<input type="button" id="close" value="close new window">
+
+</p>
+
+<p>
+    <input type="button" id="openClose" value="open close window">
+</p>
+
+</form>
+</body>
+
+<script>
+    function initialize(){
+        document.getElementById("open").onclick = openNew;
+        document.getElementById("close").onclick = closeNew;
+        document.getElementById("openClose").onclick = openClose;
+    }
+
+    function openNew(){
+        newWindow = window.open("http://www.google.com", "", "height:400px,width:400px");
+    }
+
+    function closeNew(){
+        if(newWindow){
+            newWindow.close();
+            newWindow = null;
+        }
+    }
+
+    function openClose(){
+        if(newWindow == null){
+            openNew();
+        } else {
+            closeNew();
+        }
+    }
+</script>
