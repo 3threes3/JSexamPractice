@@ -1,0 +1,32 @@
+<script>
+
+    try{
+        var number = getNumber();
+        if(evaluateNumber(number)){
+            document.write("Grats on inputting a correct number");
+        }
+    } catch (e){
+        document.write(e);
+    }
+
+    function getNumber(){
+        let number = prompt("Enter a number from 1 to 9");
+        if(isNaN(number)){
+            throw new Error("That's not a number");
+        } else {
+            return number;
+        }
+    }
+
+    function evaluateNumber(number){
+        if(number < 1 || number > 9){
+            throw new Error ("That number is out of the range requested")
+        } else {
+            return true;
+        }
+    }
+
+
+
+
+</script>
