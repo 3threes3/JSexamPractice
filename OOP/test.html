@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Person.js"></script>
+    <script src="Student.js"></script>
+</head>
+<body>
+
+    <script>
+    person1 = new Person(1, 2, "Perico", "Palotes");
+    person2 = new Student(3, 4, "DF", "Lorenzo", "Second year", "Staples Center");
+
+    document.write(person1.toStringPerson() + "<br>");
+    document.write(person2.toStringStudent());
+    </script>
+    
+</body>
+</html>
